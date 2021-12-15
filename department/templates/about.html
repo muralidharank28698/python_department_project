@@ -1,0 +1,280 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Department project</title>
+    <link rel="stylesheet" href="{% static 'styles/header.css' %}" />
+    <link rel="stylesheet" href="{% static 'styles/about.css' %}" />
+    <link rel="stylesheet" href="{% static 'styles/footer.css' %}" />
+    <link
+      rel="stylesheet"
+      href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css"
+    />
+
+    <link
+      href="http://fonts.googleapis.com/css?family=Cookie"
+      rel="stylesheet"
+      type="text/css"
+    />
+  </head>
+  <body>
+    <header id="navbar">
+      <nav class="navbar-container container">
+        <div class="navbar-logo">
+          <img src="{% static 'images/clglogo.jpg' %}" alt="" />
+        </div>
+        <h1>Puducherry Technological University</h1>
+
+        <button
+          type="button"
+          id="navbar-toggle"
+          aria-controls="navbar-menu"
+          aria-label="Toggle menu"
+          aria-expanded="false"
+        >
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <div id="navbar-menu" aria-labelledby="navbar-toggle">
+          <ul class="navbar-links">
+            <li class="navbar-item">
+              <a class="navbar-link" href="{% url 'index' %}">Home</a>
+            </li>
+            <li class="navbar-item">
+              <a class="navbar-link" href="{% url 'department' %}"
+                >Departments</a
+              >
+            </li>
+            <li class="navbar-item">
+              <a class="navbar-link" href="{% url 'about' %}">About</a>
+            </li>
+            <!-- <li class="navbar-item">
+                <a class="navbar-link" href="/contact">Contact</a>
+              </li> -->
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <div class="about_first_image">
+      <img src="{% static 'images/img2.jpeg' %}" alt="" />
+    </div>
+    <div class="container">
+      <!-- <div class="wrapper">
+        <div class="hr">
+          <hr />
+          <h2>Our Mission</h2>
+          <hr />
+        </div>
+
+        <p class="mission-txt">"To Provide Quality Education at Low Cost"</p>
+      </div> -->
+
+      <div class="wrapper">
+        <h2>An Introduction</h2>
+        <div>
+          <img
+            src="https://vidyasheela.com/web-contents/website-components/About-Us-Pages/responsive-about-us-page-html/teaching.png"
+            alt="img"
+          />
+          <p style="text-indent: 30px">
+            <b>Pondicherry Engineering College (PEC) </b> is an Institution
+            sponsored by the Union Territory of Pondicherry, India. The College
+            was started in 1984 under the VII Five Year Plan. It is an
+            autonomous Institution for the purposes of administration, staff
+            recruitment and College development and is managed by a Board of
+            Governors. The College is affiliated to Pondicherry University,
+            Pondicherry, for the academic purposes. The College has been growing
+            from strength to strength since its inception.
+          </p>
+          <br />
+          <p style="text-indent: 30px">
+            The College campus is situated at Pillaichavady which is about 12 km
+            from the Railway station and bus-stand in Pondicherry town. It is
+            about 160 km south of Chennai (Madras) on the shores of Bay of
+            Bengal. The campus is also well connected by town buses from
+            Pondicherry. Buses ply between Chennai (Madras) and Pondicherry
+            frequently and the duration of journey is about 3 to 4 hours. The
+            buses that come from Chennai via East Coast Road (ECR) stop near the
+            campus itself. Commutation by auto-rickshaws from Pondicherry city
+            would cost around Rs. 75.
+          </p>
+          <br />
+          <p style="text-indent: 30px">
+            The temperatures during the year vary between 25oC to 35oC, but it
+            is always less harsher than other coastal cities making the place
+            very pleasant and congenial for professional education. The campus
+            is of great scenic beauty and forms an excellent setting for the
+            pursuit of studies in engineering and technology.
+          </p>
+          <br />
+          <p style="text-indent: 30px">
+            The well planned departmental buildings, library, hostels, students'
+            amenities centre, open air theatre, residential quarters for staff
+            with neatly laid out roads, lawns and gardens constitute the PEC
+            campus which is about 210 acres.
+          </p>
+        </div>
+      </div>
+
+      <div class="wrapper">
+        <h2>Faculties</h2>
+        <div class="faculties">
+          <div class="unit">
+            <img
+              src="https://vidyasheela.com/web-contents/website-components/About-Us-Pages/responsive-about-us-page-html/Director.jpg"
+              alt=""
+            />
+            <p>Jona Chen, Director</p>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus
+              unde aliquid laborum voluptatum distinctio nobis?'
+            </p>
+          </div>
+          <div class="unit">
+            <img
+              src="https://vidyasheela.com/web-contents/website-components/About-Us-Pages/responsive-about-us-page-html/Director.jpg"
+              alt=""
+            />
+            <p>Jona Chen, Director</p>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus
+              unde aliquid laborum voluptatum distinctio nobis?'
+            </p>
+          </div>
+          <div class="unit">
+            <img
+              src="https://vidyasheela.com/web-contents/website-components/About-Us-Pages/responsive-about-us-page-html/Director.jpg"
+              alt=""
+            />
+            <p>Jona Chen, Director</p>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus
+              unde aliquid laborum voluptatum distinctio nobis?'
+            </p>
+          </div>
+          <div class="unit">
+            <img
+              src="https://vidyasheela.com/web-contents/website-components/About-Us-Pages/responsive-about-us-page-html/Director.jpg"
+              alt=""
+            />
+            <p>Jona Chen, Director</p>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus
+              unde aliquid laborum voluptatum distinctio nobis?'
+            </p>
+          </div>
+          <div class="unit">
+            <img
+              src="https://vidyasheela.com/web-contents/website-components/About-Us-Pages/responsive-about-us-page-html/Director.jpg"
+              alt=""
+            />
+            <p>Jona Chen, Director</p>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus
+              unde aliquid laborum voluptatum distinctio nobis?'
+            </p>
+          </div>
+          <div class="unit">
+            <img
+              src="https://vidyasheela.com/web-contents/website-components/About-Us-Pages/responsive-about-us-page-html/Principal.jpg"
+              alt=""
+            />
+            <p>Mathew Tram, Principal</p>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus
+              unde aliquid laborum voluptatum distinctio nobis?'
+            </p>
+          </div>
+          <div class="unit">
+            <img
+              src="https://vidyasheela.com/web-contents/website-components/About-Us-Pages/responsive-about-us-page-html/vice-principal.jpg"
+              alt=""
+            />
+            <p>Lawn Sethi, Vice Principal</p>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus
+              unde aliquid laborum voluptatum distinctio nobis?'
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="map">
+      <a
+        href="http://maps.google.com/maps?q=Pondicherry+Engineering+College,+Puducherry,+Pondicherry,+India&amp;hl=en&amp;sll=12.011408,79.853783"
+        target="_blank"
+        >View college in Map</a
+      >
+    </div>
+    <footer class="footer-distributed">
+      <div class="footer-left">
+        <img
+          src="{% static 'images/clglogo.jpg' %}"
+          style="width: 15%; height: 10%"
+        />
+        <h3>About<span> PTU</span></h3>
+
+        <p class="footer-links">
+          <a href="#">Home</a>
+          |
+          <a href="#">Blog</a>
+          |
+          <a href="#">About</a>
+          |
+          <a href="#">Contact Us</a>
+        </p>
+
+        <p class="footer-company-name">
+          Copyright © 2021 PTU Learning Technology University.
+        </p>
+      </div>
+
+      <div class="footer-center">
+        <div>
+          <i class="fa fa-map-marker"></i>
+          <p>
+            <span>Pillaichavady</span>
+            Puducherry - 605 014. <br />
+
+            India.
+          </p>
+        </div>
+
+        <div>
+          <i class="fa fa-phone"></i>
+          <p>0413-2655281-288</p>
+        </div>
+        <div>
+          <i class="fa fa-envelope"></i>
+          <p><a href="mailto:info@pec.edu">info@pec.edu</a></p>
+        </div>
+      </div>
+      <div class="footer-right">
+        <p class="footer-company-about">
+          <span>About the PTU</span>
+          We offer training and skill building courses across Technology,
+          Design, Management, Science and Humanities.
+        </p>
+        <div class="footer-icons">
+          <a href="#"><i class="fa fa-facebook"></i></a>
+          <a href="#"><i class="fa fa-twitter"></i></a>
+          <a href="#"><i class="fa fa-instagram"></i></a>
+          <a href="#"><i class="fa fa-linkedin"></i></a>
+          <a href="#"><i class="fa fa-youtube"></i></a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- <div id="footer">
+      <center>
+        Copyright &copy; 2022 | Design By dharanarjun28698@gmail.com
+      </center>
+    </div> -->
+    <script src="{% static 'scripts/header.js' %}"></script>
+  </body>
+</html>

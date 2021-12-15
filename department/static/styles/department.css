@@ -1,0 +1,59 @@
+.dep {
+  /* border: 2px solid red; */
+  margin: 30px auto;
+  /* background-color: green; */
+  width: 80%;
+}
+.deptit {
+  /* border: 1px solid green; */
+  margin: 30px auto;
+  background-color: rgb(66, 68, 66);
+  width: 80%;
+  height: 150px;
+  /* opacity: 0.7; */
+  border-radius: 10px;
+}
+.deptit h2 {
+  float: right;
+  margin-right: 30px;
+  margin-top: 80px;
+  font-size: 36px;
+  font-family: serif;
+  color: rgb(244, 246, 250);
+  text-shadow: 3px 3px 2px rgb(240, 53, 6);
+}
+
+table {
+  border-spacing: 1;
+  border-collapse: collapse;
+  border-radius: 4px;
+  overflow: hidden;
+  max-width: 800px;
+  background-color: #e7edee;
+  width: 100%;
+  margin: 60px auto;
+  position: relative;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  word-spacing: 4px;
+  font-size: 22px;
+}
+table th {
+  background-color: rgba(133, 5, 116, 0.89);
+  color: rgb(241, 241, 243);
+  font-family: serif;
+  font-size: 20px;
+}
+td,
+th {
+  padding-left: 8px;
+  font-family: serif;
+}
+tr {
+  height: 50px;
+  font-size: 14px;
+}
+table tr td a:hover {
+  color: rgb(9, 158, 17);
+  text-decoration: none;
+}
