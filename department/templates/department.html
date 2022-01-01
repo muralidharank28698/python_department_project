@@ -60,7 +60,7 @@
       <h2>Departments</h2>
     </div>
     <div class="dep">
-      <table border="1">
+      <!-- <table border="1">
         <tr>
           <th>S.No</th>
           <th>Departments</th>
@@ -79,10 +79,6 @@
             <a href="{% url 'eee' %}">Electrical and Electronics Engineering</a>
           </td>
         </tr>
-        <!-- <tr>
-          <td>3</td>
-          <td><a href=""> Electronics and Instrumentation Engineering</a></td>
-        </tr> -->
         <tr>
           <td>3</td>
           <td><a href="{% url 'cse' %}"> Computer Science Engineering</a></td>
@@ -107,7 +103,108 @@
           <td>8</td>
           <td><a href="{% url 'chemistry' %}"> Chemistry</a></td>
         </tr>
-      </table>
+      </table> -->
+
+      <!-- All Departments... -->
+
+      <div class="cards">
+        <div class="card">
+          <div class="image-sec">
+            <img src="{% static 'images/ece.jpg' %}" alt="" />
+          </div>
+          <div class="description">
+            <p>Electronic & Communication Engineering</p>
+          </div>
+          <div class="btn">
+            <a href="{% url 'ece' %}" class="buy">view ECE</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="image-sec">
+            <img src="{% static 'images/eeei.jpg' %}" alt="" />
+          </div>
+          <div class="description">
+            <p>Electrical & Electronics Engineering</p>
+          </div>
+          <div class="btn">
+            <a href="{% url 'eee' %}" class="buy">view EEE</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="image-sec">
+            <img src="{% static 'images/cse.jpg' %}" alt="" />
+          </div>
+          <div class="description">
+            <p>Computer science and engineering</p>
+          </div>
+          <div class="btn">
+            <a href="{% url 'cse' %}" class="buy">view CSE</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="image-sec">
+            <img src="{% static 'images/it.jpg' %}" alt="" />
+          </div>
+          <div class="description">
+            <p>Information Technology</p>
+          </div>
+          <div class="btn">
+            <a href="{% url 'it' %}" class="buy">view IT</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="image-sec">
+            <img src="{% static 'images/me.jpg' %}" alt="" />
+          </div>
+          <div class="description">
+            <p>Mechanical Engineering</p>
+          </div>
+          <div class="btn">
+            <a href="{% url 'me' %}" class="buy">view ME</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="image-sec">
+            <img src="{% static 'images/ce.jpg' %}" alt="" />
+          </div>
+          <div class="description">
+            <p>Chemical Engineering</p>
+          </div>
+          <div class="btn">
+            <a href="{% url 'ce' %}" class="buy">view CE</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="image-sec">
+            <img src="{% static 'images/ma.jpg' %}" alt="" />
+          </div>
+          <div class="description">
+            <p>Mathematics</p>
+          </div>
+          <div class="btn">
+            <a href="{% url 'mathematics' %}" class="buy">view Math</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="image-sec">
+            <img src="{% static 'images/ch.jpg' %}" alt="" />
+          </div>
+          <div class="description">
+            <p>Chemistry</p>
+          </div>
+          <div class="btn">
+            <a href="{% url 'chemistry' %}" class="buy">view CHEMISTRY</a>
+          </div>
+        </div>
+      </div>
+
       <hr
         style="
           width: 96%;
@@ -211,6 +308,7 @@
     </div> -->
     <!-- <script src="./bootstrap/js/bootstrap.min.js"></script> -->
     <!-- <a href="{% url 'index' %}">Home</a> -->
+
     <script src="{% static 'scripts/header.js' %}"></script>
   </body>
 </html>

@@ -1,0 +1,37 @@
+/* {% load static %} */
+.centercontainer {
+  width: 100%;
+  height: 240px;
+  /* position: absolute; */
+  /* background-color: blue; */
+  /* display: inline-block; */
+  /* background-image: url("{% static 'images/si2.jpg' %}"); */
+  /* background-repeat: no-repeat; */
+  /* background-size: cover; */
+  position: relative;
+  text-align: center;
+  /* color: white; */
+}
+.centercontainer h1 {
+  color: #272929;
+  font-size: 26px;
+  font-weight: 200px;
+  text-shadow: 2px 3px 2px rgb(57, 75, 163);
+  font-family: serif;
+  /* text-align: center; */
+  /* margin: 100px auto; */
+  /* display: inline-block; */
+  position: absolute;
+  /* font-style: oblique; */
+  line-height: 40px;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  word-spacing: 8px;
+}
+
+.centercontainer img {
+  width: 100%;
+  height: 100%;
+  opacity: 0.7;
+}

@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Department project</title>
+    <link rel="stylesheet" href="{% static 'styles/alldepstyle.css' %}" />
+    <link rel="stylesheet" href="{% static 'styles/cse.css' %}" />
+    <link rel="stylesheet" href="{% static 'styles/alldepnav.css' %}" />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <img src="{% static 'images/clglogo.jpg' %}" alt="" />
+      </div>
+      <h1>Pondicherry Technological University</h1>
+    </header>
+    <div class="centercontainer">
+      <img src="{% static 'images/si2.jpg' %}" alt="" />
+      <h1>DEPARTMENT OF COMPUTER SCIENCE AND ENGINEERING</h1>
+    </div>
+
+    <div class="container purple topBotomBordersIn">
+      <a href="{% url 'cse' %}">HOME</a>
+      <a href="{% url 'csefaculty' %}">FACULTY</a>
+      <a href="{% url 'csesyllabus' %}">SYLLABUS</a>
+      <a href="{% url 'csefacility' %}">FACILITY</a>
+    </div>
+    <h1>syllabus</h1>
+  </body>
+</html>

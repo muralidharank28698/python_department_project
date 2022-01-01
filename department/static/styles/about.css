@@ -21,7 +21,7 @@ body {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  background: rgb(223, 215, 215);
+  /* background: rgb(223, 215, 215); */
   margin: 10px auto;
   padding: 5px 30px;
   width: 100%;
@@ -109,14 +109,54 @@ div img {
 .map {
   width: 200px;
   float: right;
-  margin-right: 20px;
+  margin-right: -26px;
+  padding: 4px;
 }
 .map a {
   text-decoration: none;
-  font-size: 18px;
+  font-size: 16px;
   color: rgb(74, 5, 204);
 }
 .map a:hover {
   color: green;
+  text-decoration: underline;
+}
+.encontainer {
+  width: 95%;
+  /* background-color: oldlace; */
+  margin: auto;
+  margin-top: 20px;
+  /* height: max-content; */
+  display: flex;
+  height: 300px;
+}
+.encontainer .leftcon {
+  width: 60%;
+  /* background-color: red; */
+  height: 100%;
+}
+.encontainer .leftcon img {
+  width: 100%;
+  height: 100%;
+}
+.encontainer .rightcon {
+  width: 40%;
+  /* background-color: rgb(27, 24, 24); */
+  height: 100%;
+  margin-left: 40px;
+}
+.encontainer .rightcon ul {
+  margin-left: 30px;
+  margin-top: 10px;
+}
+.encontainer .rightcon ul > li {
+  /* background-color: red; */
+  padding: 6px;
+}
+.rightcon h4 {
+  color: green;
+  font-size: 22px;
+  font-family: serif;
+  margin-left: 30px;
   text-decoration: underline;
 }

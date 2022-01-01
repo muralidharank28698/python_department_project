@@ -7,21 +7,138 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Department project</title>
     <link rel="stylesheet" href="{% static 'styles/alldepstyle.css' %}" />
+    <link rel="stylesheet" href="{% static 'styles/cse.css' %}" />
+    <link rel="stylesheet" href="{% static 'styles/alldepnav.css' %}" />
   </head>
   <body>
     <header>
       <div class="logo">
         <img src="{% static 'images/clglogo.jpg' %}" alt="" />
       </div>
-      <h1>Pondicherry Technological University</h1>
-      <h2>COMPUTER SCIENCE ENGINEERING</h2>
+      <h1>Puducherry Technological University</h1>
     </header>
+    <div class="centercontainer">
+      <img src="{% static 'images/si2.jpg' %}" alt="" />
+      <h1>DEPARTMENT OF COMPUTER SCIENCE AND ENGINEERING</h1>
+    </div>
 
     <div class="container purple topBotomBordersIn">
-      <a>HOME</a>
-      <a>FACULTY</a>
-      <a>SYLLABUS</a>
-      <a>FACILITY</a>
+      <a href="#">HOME</a>
+      <a href="{% url 'csefaculty' %}">FACULTY</a>
+      <a href="{% url 'csesyllabus' %}">SYLLABUS</a>
+      <a href="{% url 'csefacility' %}">FACILITY</a>
     </div>
+    <div class="top">
+      <table>
+        <tr>
+          <th rowspan="0" id="r1">explore the department</th>
+          <th>Students</th>
+          <th>scholors</th>
+          <th>Faculty</th>
+          <td rowspan="0" id="d1">300+ Publications</td>
+        </tr>
+        <tr>
+          <!-- <th rowspan="0">f;sdghfnm</th> -->
+          <td>256</td>
+          <td>16</td>
+          <td>12</td>
+          <!-- <td rowspan="1">300+ Publications</td> -->
+        </tr>
+      </table>
+    </div>
+    <div class="aboutdep">
+      <h2>About CSE</h2>
+      <p>
+        The Department aims at providing high quality training to students
+        through the latest in computer technology. In order to maintain the
+        standard of education, the department constantly upgrades the academic
+        syllabi so as to keep the students well trained to deal with changing
+        trends in the field of Computer Science and Engineering.
+        <b>
+          The Department offers B.Tech. (CSE), M.Tech. (Data Science), M.Tech.
+          (Information Security), MCA and Ph.D.(including QIP and NDF schemes)
+          programme.
+        </b>
+      </p>
+      <br />
+      <p>
+        The Department places emphasis on Component Technology, Computing, Data
+        Sciences, Information Security, High Speed Networks, Wireless and Mobile
+        Networks, Agile Programming Methodologies, Language Technologies,
+        Software Architecture, Software metrics, and several other recent
+        topics. The Choice Based Credit System is followed for PG program which
+        enables the selection of subjects by students themselves and confers
+        grades relative to the peer's performance. The curriculum of all courses
+        are designed in such a way so as to enable students to carry out major
+        and minor projects in leading industries/institutions, besides their
+        regular classes and seminars. The students of the department have done
+        projects in major companies like TCS, HCL, RAMCO, CTS, Nature Soft, NAL,
+        ISRO, NLC, IGCAR etc. The Department regularly organizes a series of
+        lectures by academicians and professionals of the highest repute, which
+        lay stress on the latest innovative technologies in the field of
+        Computer Science and Engineering and Information Technology.
+      </p>
+    </div>
+    <div class="twocontainer">
+      <div class="lcon">
+        <h3>mission statement</h3>
+        <p>
+          To explore innovative approaches to enhance and expand learning
+          opportunities through the integration of various technologies.
+        </p>
+        <p>
+          To build a strong research and teaching environment that responds to
+          the real-time challenges of the industry.
+        </p>
+      </div>
+      <div class="rcon">
+        <h3>vision statement</h3>
+        <ul>
+          <li>
+            To inculcate the blend of competence, aptitude of knowledge and
+            investigate flair through devising an ambient environment for
+            sustainable learning.
+          </li>
+          <li>
+            To transform attitude, values, priorities by changing mindset and
+            instill positive outlook for socially conscious intellectual
+            development.
+          </li>
+          <li>
+            Incubate, apply and spread innovative ideas to evolve the department
+            as a centre of excellence in thrust areas.
+          </li>
+        </ul>
+      </div>
+    </div>
+    <footer class="fixed_footer">
+      <div class="foot_contact">
+        <h1>Professor &amp; Head</h1>
+        <h2>Dr. G. ZAYARAZ, <font size="3">M.Tech., Ph.D.,</font></h2>
+
+        <ul>
+          <li><strong>Tel:</strong> (0413)2655281</li>
+          <li><strong>Extn:</strong> 451</li>
+          <li><strong>Res:</strong> 94439 58140</li>
+
+          <li class="last">
+            <strong>Email:</strong> <a href="#">hod.cse@pec.edu</a>
+          </li>
+        </ul>
+      </div>
+      <hr style="margin: 10px auto; box-shadow: 2px 2px 3px rgb(95, 92, 92)" />
+      <div class="footbox">
+        <h2>Programmes offered:</h2>
+        <ul>
+          <li class="last">
+            B.Tech. Computer Science &amp; Engineering (60 + 60 (Self-support))
+          </li>
+          <li class="last">M.Tech. Data Science (25)</li>
+          <li class="last">M.Tech. Information Security (25)</li>
+          <li class="last">Ph.D in Computer Science &amp; Engineering</li>
+          <li class="last">Ph.D in Computer Science</li>
+        </ul>
+      </div>
+    </footer>
   </body>
 </html>

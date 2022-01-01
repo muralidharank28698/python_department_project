@@ -55,6 +55,15 @@ def mathematics(request):
 
 def chemistry(request):
     return render(request,'./chemistry.html')
+
+def csefaculty(request):
+    return render(request,'./csefaculty.html')
+
+def csesyllabus(request):
+    return render(request,'./csesyllabus.html')
+
+def csefacility(request):
+    return render(request,'./csefacility.html')
 # def insertrecord(request):
 #     form = Formregister(request.POST or None)
 #     if form.is_valid():

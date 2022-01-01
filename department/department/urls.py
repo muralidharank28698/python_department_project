@@ -34,6 +34,9 @@ urlpatterns = [
     path('ce/',views.ce,name='ce'),
     path('mathematics/',views.mathematics,name='mathematics'),
     path('chemistry/',views.chemistry,name='chemistry'),
+    path('csefaculty/',views.csefaculty,name='csefaculty'),
+    path('csesyllabus/',views.csesyllabus,name='csesyllabus'),
+    path('csefacility/',views.csefacility,name='csefacility'),
 
     # path('about/',views.about,name='about')
 

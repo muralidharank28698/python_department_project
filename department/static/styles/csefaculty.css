@@ -1,0 +1,41 @@
+body {
+  /* background-color: rgb(46, 43, 40); */
+}
+.cencontainer {
+  width: 60%;
+  /* background-color: red; */
+  margin: 50px auto;
+  height: max-content;
+}
+.cencontainer table {
+  width: 100%;
+}
+.cencontainer table button {
+  width: 50%;
+  color: white;
+  background-color: blueviolet;
+  height: 30px;
+  font-size: 22px;
+  border-radius: 6px;
+  border: none;
+}
+table {
+  border-collapse: separate;
+  border-spacing: 0px 10px;
+}
+
+th {
+  background-color: #353b48;
+  color: white;
+  font-size: 18px;
+  height: 40px;
+}
+
+td {
+  width: 150px;
+  text-align: center;
+  border: 1px solid orange;
+  padding: 5px;
+  font-size: 18px;
+  font-weight: bold;
+}
