@@ -4,12 +4,19 @@
 
 from django.shortcuts import render
 # from django.http import HttpResponse
-from department.models import Register
+from department.models import Faculty
 from django.contrib import messages
+from .models import Faculty
+from .models import Register
+# from django.contrib.auth.models import saverecord, auth
 # from .forms import Formregister
+
+import base64
+
 
 def index(request):
     return render(request,'index.html')
+
 
 
 def department(request):
@@ -57,13 +64,29 @@ def chemistry(request):
     return render(request,'./chemistry.html')
 
 def csefaculty(request):
-    return render(request,'./csefaculty.html')
+    results = Faculty.objects.all()
+    return render(request,'./csefaculty.html', {'Faculty':results})
+    # return render(request,'./csefaculty.html')
 
 def csesyllabus(request):
     return render(request,'./csesyllabus.html')
 
 def csefacility(request):
     return render(request,'./csefacility.html')
+
+    
+def departmentPortal(request):
+    return render(request,'./departmentPortal.html')
+    
+def login(request):
+    # if request.method == 'post':
+    #     mailid = request.POST['mailid']
+    #     password = request.POST['password']
+
+        # saverecord = user.authenticate(mailid=mailid,password=password)
+
+    # else:
+        return render(request,'./login.html')
 # def insertrecord(request):
 #     form = Formregister(request.POST or None)
 #     if form.is_valid():

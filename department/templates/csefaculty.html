@@ -1,3 +1,6 @@
+
+
+
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
@@ -27,68 +30,117 @@
       <a href="{% url 'csefaculty' %}">FACULTY</a>
       <a href="{% url 'csesyllabus' %}">SYLLABUS</a>
       <a href="{% url 'csefacility' %}">FACILITY</a>
+      
     </div>
-    <!-- <h1>faculty</h1> -->
-    <div class="cencontainer">
-      <table>
-        <!-- <tr>
-        </tr> -->
-        <tr colspan="2">
-          <!-- <th>Name</th> -->
-          <th colspan="3">HOD</th>
-          <!-- <th>Qualification</th> -->
-        </tr>
-        <tr>
-         <td>;sfj/uyfglkdksfouighlfd;kd'iough</td>
-         <!-- <td>sdfjhkbnm</td> -->
-         <td><button>view</button></td>
-        </tr>
-        <tr>
-          <th colspan="3">PROFESSORS</th>
-        </tr>
-        <tr colspan="2">
-          <!-- <th>Name</th> -->
-          <!-- <th>Qualification</th> -->
-        </tr>
-        <tr>
-          <td>skgfn,m</td>
-          <!-- <td>skgfn,m</td> -->
-          <td><button>view</button></td>
-        </tr>
-        <tr>
-          <td>skgfn,m</td>
-          <!-- <td>skgfn,m</td> -->
-          <td><button>view</button></td>
+    <div class="deptop">
+      <h2>Computer science department faculties</h2>
+    </div>
+      <div class="cencontainer">
+        {% for getdata in Faculty %}
+        <!-- <article> -->
+        {% if getdata.position == 'HOD' %}
+        <div class="cards" style="grid-column: 1 / -1;display: grid;
+         margin: auto;">
+        <h1 class="top" style="text-align: center;font-style: italic; color: royalblue;font-size: 23px;font-family: serif;border-bottom: 1px solid rgb(50, 17, 238);">.../Head of the department\...</h1>
 
-        </tr>
-        <!-- <tr>
-          <td>skgfn,m</td>
-          <td>skgfn,m</td>
-          <td>view</td>
-        </tr> -->
-        <tr>
-          <th colspan="3">ASSOCIATE PROFESSOR</th>
-        </tr>
-        <!-- <tr colspan="2"> -->
-          <!-- <th>Name</th> -->
-          <!-- <th>Qualification</th> -->
-        <!-- </tr> -->
-        <tr>
-          <td>skgfn,msdgfn,./uyhjfhyufjhg</td>
-          <!-- <td>skgfn,m</td> -->
-          <td><button>view</button></td>
-        </tr>
-        <tr>
-          <td>skgfn,m</td>
-          <!-- <td>skgfn,m</td> -->
-          <td><button>view</button></td>
-        </tr>
-      </table>
+        {% else %}
+        {% if getdata.position == 'PROFESSOR' %}
+        <div class="cards" style="grid-column: 3/ 0;">
+          <h2 style="text-align: center;letter-spacing: 2px; text-shadow: 1px 1px 1px blue; color: rgb(102, 98, 101);font-size: 16px;font-family: serif;border-bottom: 3px solid rgb(133, 66, 88);">PROFESSOR</h2>
+        {% elif getdata.position == 'ASSOCIATE PROFESSOR' %}
+        <div class="cards" style="grid-column: 3/0;">
+          <h2 style="text-align: center; letter-spacing: 2px; text-shadow: 2px 1px 2px rgb(58, 228, 16); color: rgb(38, 36, 41);font-size: 16px;font-family: serif;border-bottom: 3px solid rgb(21, 139, 194);">ASSOCIATE PROFESSOR</h2>
+         
 
-      <!-- <div class="head">
-        <h2>Head of the Department</h2>
-        <button>view hod</button> -->
+          {% elif getdata.position == 'ASSISTANT PROFESSOR' %}
+          <div class="cards" style="grid-column: 3/ 0;">
+            <h2 style="text-align: center;letter-spacing: 2px; color: rgb(23, 4, 87);font-size: 16px;font-family: serif;border-bottom: 3px solid rgb(205, 219, 10);">ASSISTENT PROFESSOR</h2>
+            {% else %}
+
+        <div class="cards" style="grid-column: 3/ 0;">
+          
+
+        {% endif %}
+        
+        {% endif %}
+       
+
+
+        <!-- {% if getdata.position == 'PROFESSOR' %}
+        <div class="cards" style="">
+        <h1 class="top" style="text-align: center;font-style: italic; color: royalblue;font-size: 23px;font-family: serif;border-bottom: 1px solid rgb(50, 17, 238);">.../Professors\...</h1>
+
+        {% else %}
+        <div class="cards">
+        {% endif %} -->
+
+          <div>
+           
+            <img src="{% static getdata.profile %}" alt="">
+
+            <hr
+              style="
+                height: 2px;
+                border: 0;
+                box-shadow: 0 10px 10px -10px #a5a3a1 inset;
+              "
+            />
+            <table>
+              <tr>
+                <th>Name:</th>
+                <td>{{getdata.name}}</td>
+              </tr>
+              <tr>
+                <th>Education:</th>
+                <td>{{getdata.education}}</td>
+              </tr>
+              <tr>
+                <th>Position:</th>
+                <td>{{getdata.position}}</td>
+              </tr>
+              <tr>
+                <th>Specialization:</th>
+                <td>{{getdata.specialization}}</td>
+              </tr>
+              <tr>
+                <th>Phone No:</th>
+                <td>{{getdata.phoneno}}</td>
+              </tr>
+              <tr>
+                <th>Mail Id:</th>
+                <td>{{getdata.email}}</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <!-- </article> -->
+        {% endfor %}
       </div>
-    </div>
+    <hr />
+    <!-- Data Show in Table format also -->
+
+    <table id="tab">
+      <tr>
+        <th>profile</th>
+        <th>name</th>
+        <th>education</th>
+        <th>position</th>
+        <th>Specialization</th>
+        <th>phone no</th>
+        <th>email</th>
+      </tr>
+      {% for getdata in Faculty %}
+      <tr>
+        <td><img src="{% static getdata.profile %}" style="width: 100%;height: 160px;" alt="">
+        </td>
+        <td>{{getdata.name}}</td>
+        <td>{{getdata.education}}</td>
+        <td>{{getdata.position}}</td>
+        <td>{{getdata.specialization}}</td>
+        <td>{{getdata.phoneno}}</td>
+        <td>{{getdata.email}}</td>
+      </tr>
+      {% endfor %}
+    </table>
   </body>
 </html>

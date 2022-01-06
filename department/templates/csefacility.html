@@ -10,6 +10,74 @@
     <link rel="stylesheet" href="{% static 'styles/cse.css' %}" />
     <link rel="stylesheet" href="{% static 'styles/alldepnav.css' %}" />
   </head>
+  <style>
+    body {
+      background-color: rgb(246, 244, 246);
+    }
+    .tab {
+      /* background-color: red; */
+      width: 85%;
+      /* height: 400px; */
+      margin: 60px auto;
+    }
+    .tab table {
+      width: 100%;
+      /* border-collapse: collapse; */
+      border-collapse: separate;
+      border-spacing: 0 15px;
+    }
+    /* .tab th {
+  background-color: #353b48;
+  color: rgb(3, 238, 35);
+  font-size: 18px;
+  height: 40px;
+  text-align: center;
+} */
+
+    /* .tab table tr {
+      background-color: rgb(218, 217, 214);
+    } */
+    .tab table td h2 {
+      color: rgb(100, 173, 5);
+      font-size: 18px;
+      font-weight: bold;
+      word-spacing: 3px;
+      font-family: serif;
+      text-decoration: underline;
+    }
+    .tab table td p {
+      color: rgb(107, 104, 106);
+      font-size: 16px;
+      line-height: 26px;
+    }
+
+    .tab table td {
+      /* width: 180px; */
+      text-align: left;
+      /* border: 1px solid rgb(231, 4, 117); */
+      padding: 8px;
+      font-size: 18px;
+      font-weight: bold;
+      color: darkslategrey;
+      /* margin-left: 60px; */
+      margin-left: 10px;
+    }
+
+    /* #row2 {
+      text-align: center;
+    }
+    #row3 {
+      text-align: center;
+    } */
+
+    #footer {
+      height: 60px;
+      width: 100%;
+      background-color: #050435;
+      color: white;
+      line-height: 60px;
+    }
+  </style>
   <body>
     <header>
       <div class="logo">
@@ -28,6 +96,166 @@
       <a href="{% url 'csesyllabus' %}">SYLLABUS</a>
       <a href="{% url 'csefacility' %}">FACILITY</a>
     </div>
-    <h1>facility</h1>
+    <div class="tab">
+      <table>
+        <tr>
+          <td>
+            <h2>SRINIVASA RAMANUJAN COMPUTING CENTRE</h2>
+            <p>
+              Equipped with state of the art machines including a Super Computer
+              PARAM with transputers. This centre also functions as an Internet
+              browsing Centre with 64Kbps-leased line from STPI..
+            </p>
+          </td>
+          <td>
+            <img
+              src="{% static 'images/lab1.jpg' %}"
+              style="width: 98%; height: 180px"
+              alt=""
+            />
+          </td>
+          <td>
+            <img
+              src="{% static 'images/lab2.jpg' %}"
+              style="width: 98%; height: 180px"
+              alt=""
+            />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <h2>DISTRIBUTED COMPUTING LAB</h2>
+            <p>
+              Equipped with 40 system with Internet facility and has VPS-1 with
+              i5 processor(64 bit os) RAM-4GB
+            </p>
+          </td>
+          <td>
+            <img
+              src="{% static 'images/lab3.jpg' %}"
+              style="width: 98%; height: 180px"
+              alt=""
+            />
+          </td>
+          <td>
+            <img
+              src="{% static 'images/lab4.jpg' %}"
+              style="width: 98%; height: 180px"
+              alt=""
+            />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <h2>RESEARCH LABORATORY:</h2>
+            <p>
+              Equipped with 14 system with internet facility with VPS-1,i3
+              processor(64 bit os) RAM-4GB
+            </p>
+          </td>
+          <td>
+            <img
+              src="{% static 'images/lab5.jpg' %}"
+              style="width: 98%; height: 180px"
+              alt=""
+            />
+          </td>
+          <td>
+            <img
+              src="{% static 'images/lab6.jpg' %}"
+              style="width: 98%; height: 180px"
+              alt=""
+            />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <h2>HARDWARE AND TROUBLE SHOOTING LAB</h2>
+            <p>
+              Equipped with 24 system with i5-4th Gen processor(64 bit) RAM-4GB
+            </p>
+          </td>
+          <td>
+            <img
+              src="{% static 'images/lab7.jpg' %}"
+              style="width: 98%; height: 180px"
+              alt=""
+            />
+          </td>
+          <td>
+            <img
+              src="{% static 'images/lab8.jpg' %}"
+              style="width: 98%; height: 180px"
+              alt=""
+            />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <h2>APPLICATION LAB</h2>
+            <p>Equipped with 30 system i5-4th Gen processor(64 bit) RAM-2GB</p>
+          </td>
+          <td>
+            <img
+              src="{% static 'images/lab9.jpg' %}"
+              style="width: 98%; height: 180px"
+              alt=""
+            />
+          </td>
+          <td>
+            <img
+              src="{% static 'images/lab10.jpg' %}"
+              style="width: 98%; height: 180px"
+              alt=""
+            />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <h2>MICROPROCESSOR LABORATORY:</h2>
+            <p>Equipped with 25-Microprocessor and 10-Microcontroller</p>
+          </td>
+          <td>
+            <img
+              src="{% static 'images/lab11.jpg' %}"
+              style="width: 98%; height: 180px"
+              alt=""
+            />
+          </td>
+          <td>
+            <img
+              src="{% static 'images/lab12.jpg' %}"
+              style="width: 98%; height: 180px"
+              alt=""
+            />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <h2>INFORMATION SECURITY LAB</h2>
+            <p>Equipped with 27 system i5-4th GEN processor(64 bits) RAM-4GB</p>
+          </td>
+          <td>
+            <img
+              src="{% static 'images/lab13.jpg' %}"
+              style="width: 98%; height: 180px"
+              alt=""
+            />
+          </td>
+          <!-- <td>
+            <img
+              src="{% static 'images/si1.jpg' %}"
+              style="width: 98%; height: 180px"
+              alt=""
+            />
+          </td> -->
+        </tr>
+      </table>
+    </div>
+    <div id="footer">
+      <center>
+        Copyright &copy; 2022 | Design By dharanarjun28698@pec.edu
+      </center>
+    </div>
   </body>
 </html>

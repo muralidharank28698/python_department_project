@@ -1,0 +1,218 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LOGIN FORM</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+        outline: none;
+        box-sizing: border-box;
+      }
+
+      header {
+        font-family: Raleway;
+        margin: 0 auto;
+        padding: 0.3em 1em;
+        text-align: center;
+        background: rgb(2, 0, 36);
+        background: linear-gradient(
+          90deg,
+          rgba(2, 0, 36, 1) 0%,
+          rgba(115, 115, 126, 1) 0%,
+          rgba(7, 16, 105, 1) 0%,
+          rgba(4, 30, 43, 1) 21%,
+          rgba(20, 42, 184, 1) 63%,
+          rgba(3, 17, 61, 1) 100%,
+          rgba(9, 42, 190, 1) 100%,
+          rgba(9, 49, 57, 1) 100%,
+          rgba(28, 28, 34, 1) 100%,
+          rgba(178, 181, 188, 1) 100%,
+          rgba(199, 204, 209, 1) 100%,
+          rgba(206, 211, 216, 1) 100%,
+          rgba(127, 128, 138, 1) 100%,
+          rgba(235, 242, 244, 1) 100%,
+          rgba(17, 198, 236, 1) 100%
+        );
+      }
+
+      header h1 {
+        color: #aaa;
+        font-size: 45px;
+        font-weight: lighter;
+        margin-bottom: 5px;
+        text-shadow: 5px 6px 4px rgb(31, 124, 8);
+        font-family: serif;
+      }
+      .logo {
+        /* float: left; */
+        width: 160px;
+        margin: 8px auto;
+        height: 120px;
+        border-radius: 20px;
+      }
+      .logo img {
+        width: 100%;
+        height: 100%;
+        border-radius: 20px;
+      }
+
+      body {
+        background-color: ghostwhite;
+        font-family: sans-serif;
+      }
+      #container {
+        max-width: 500px;
+        height: 320px;
+        position: absolute;
+        top: 70%;
+        text-align: center;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 400px;
+        /* border: 1px solid rgb(246, 237, 237); */
+        border: none;
+        border-radius: 6px;
+        box-shadow: 1px 2px 15px 2px rgb(155, 141, 151);
+      }
+      #container table {
+        width: 90%;
+        height: 90%;
+        margin: 6px auto;
+      }
+      #container table td {
+        padding: 5px;
+      }
+      #container table tr td input {
+        width: 100%;
+        height: 35px;
+        border-radius: 3px;
+        font-size: 20px;
+        border: 1px solid rebeccapurple;
+        transition: 0.25px;
+        cursor: pointer;
+        color: rgb(78, 10, 204);
+      }
+      #container table tr h3 {
+        font-size: 1rem;
+        margin-top: 8px;
+      }
+      #container table tr td button {
+        width: 100%;
+        height: 35px;
+        border-radius: 3px;
+        font-size: 2vw;
+        color: #f0932b;
+        background-color: #535c68;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-family: Georgia, "Times New Roman", Times, serif;
+        cursor: pointer;
+        margin-top: 6px;
+      }
+      #container table tr td button:hover {
+        color: white;
+        background-color: #30336b;
+      }
+      #container table tr td h2 {
+        font-size: 150%;
+        color: #1b1464;
+      }
+      #container table tr td h4 {
+        color: #575fcf;
+        opacity: 0.9;
+        cursor: pointer;
+      }
+      #container table tr td h3 {
+        color: #1e272e;
+        opacity: 0.8;
+      }
+      @media screen and (max-width: 500px) {
+        #container {
+          max-width: 300px;
+          height: auto;
+        }
+        #container table {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <img src="{% static 'images/clglogo.jpg' %}" alt="" />
+      </div>
+      <h1>Puducherry Technological University</h1>
+    </header>
+    <div id="container">
+      <form action="login" method="">
+        {% csrf_token %}
+        <table>
+          <tr>
+            <td><h2>Login Form</h2></td>
+          </tr>
+          <tr align="left">
+            <td><h3>Enter the mailid</h3></td>
+          </tr>
+          <tr>
+            <td>
+              <input
+                type="mailid"
+                name="mailid"
+                value=""
+                id="mailid"
+                placeholder=""
+              />
+            </td>
+          </tr>
+          <tr align="left">
+            <td><h3>Enter the Password</h3></td>
+          </tr>
+          <tr></tr>
+          <tr>
+            <td>
+              <input
+                type="password"
+                name="password"
+                value=""
+                id="pwd"
+                placeholder=""
+              />
+            </td>
+          </tr>
+          <tr align="left">
+            <td><h4>Forget Password?</h4></td>
+          </tr>
+          <tr>
+            <td align="center">
+              <button id="btn" onclick="btnclick()" name="login">login</button>
+            </td>
+          </tr>
+        </table>
+      </form>
+    </div>
+    {% for message in messages %}
+    <h2>{{message}}</h2>
+    {% endfor %}
+    <script>
+      function btnclick() {
+        // alert("working");
+        let mail = document.getElementById("mailid").value;
+        let pass = document.getElementById("pwd").value;
+        if (mail == "" && pass == "") {
+          alert("enter the mail and pass...");
+        } else if (mail == "") {
+          alert("enter the mail id...");
+        } else if (pass == "") {
+          alert("enter the password...");
+        }
+      }
+    </script>
+  </body>
+</html>

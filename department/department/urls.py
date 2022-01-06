@@ -15,6 +15,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.conf import settings
+from django.conf.urls.static import static
+import base64
+
+# from django.conf.urls import url, include
+
+# from department.department import settings
 from . import views
 
 urlpatterns = [
@@ -37,8 +44,36 @@ urlpatterns = [
     path('csefaculty/',views.csefaculty,name='csefaculty'),
     path('csesyllabus/',views.csesyllabus,name='csesyllabus'),
     path('csefacility/',views.csefacility,name='csefacility'),
+    path('departmentPortal/',views.departmentPortal,name='departmentPortal'),
+    path('login/',views.login,name='login'),
 
     # path('about/',views.about,name='about')
-
-
 ]
+
+# urlpatterns = urlpatterns + static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
+
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
+# urlpatterns += urlpatterns + static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
+
+# or
+
+# urlpatterns = patterns('',
+#     # ... the rest of your URLconf goes here ...
+# ) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+
+# or
+
+# if settings.DEBUG:
+#     # static files (images, css, javascript, etc.)
+#     urlpatterns += patterns('',
+#         (r'^media/(?P<path>.*)$', 'django.views.static.serve', {
+#         'document_root': settings.MEDIA_ROOT}))
+
+        # or
+
+# urlpatterns = [
+#   url(r'^admin/', include(admin.site.urls)),
+#   url(r'^', include(router.urls)),
+#   url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework'))]

@@ -1,41 +1,156 @@
 body {
-  /* background-color: rgb(46, 43, 40); */
+  background-color: rgb(254, 251, 255);
 }
 .cencontainer {
-  width: 60%;
-  /* background-color: red; */
-  margin: 50px auto;
-  height: max-content;
+  width: 90%;
+  margin: 4px auto;
+  display: grid;
+  /* align-items: stretch; */
+  grid-template-columns: repeat(3, 1fr);
 }
+
+.deptop h2 {
+  color: darkolivegreen;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: serif;
+  font-size: 20px;
+  word-spacing: 6px;
+  width: 500px;
+  padding: 4px;
+  border-radius: 10px;
+  margin: 30px auto;
+  -webkit-box-shadow: -2px -1px 15px 7px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: -3px -2px 30px 14px rgba(0, 0, 0, 0.425);
+  box-shadow: -4px -3px 45px 21px rgba(0, 0, 0, 0.35);
+}
+/* .grid > article {
+  border: 1px solid #ccc;
+  box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
+} */
+
+/* .grid > article img {
+  max-width: 100%;
+} */
+
+/* .cencontainer .cards {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+} */
 .cencontainer table {
   width: 100%;
 }
-.cencontainer table button {
-  width: 50%;
-  color: white;
-  background-color: blueviolet;
-  height: 30px;
-  font-size: 22px;
-  border-radius: 6px;
-  border: none;
-}
+
 table {
   border-collapse: separate;
-  border-spacing: 0px 10px;
+  border-spacing: 0px 6px;
 }
 
 th {
-  background-color: #353b48;
-  color: white;
-  font-size: 18px;
-  height: 40px;
+  /* background-color: #353b48; */
+  color: rgb(32, 26, 19);
+  font-size: 16px;
+  text-align: left;
+  /* height: 40px; */
+  padding-left: 22px;
+  text-transform: capitalize;
 }
 
 td {
-  width: 150px;
+  text-align: left;
+  padding-left: 16px;
+  /* border: 1px solid orange; */
+  /* padding: 3px; */
+  font-size: 14px;
+  font-weight: bold;
+  /* height: 60px; */
+  color: rgb(179, 11, 142);
+}
+/* .commondiv {
+  background-color: red;
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+} */
+.cards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  margin-top: 50px;
+}
+.cards div {
+  position: relative;
+  width: 340px;
+  height: 420px;
+  border: 1px solid lightblue;
+  margin: 10px;
   text-align: center;
-  border: 1px solid orange;
-  padding: 5px;
+  padding: 7px;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(115, 115, 126, 1) 0%,
+    rgba(127, 128, 138, 1) 8%,
+    rgba(130, 131, 141, 1) 10%,
+    rgba(136, 137, 147, 1) 14%,
+    rgba(148, 150, 159, 1) 22%,
+    rgba(168, 171, 178, 1) 36%,
+    rgba(178, 181, 188, 1) 43%,
+    rgba(199, 204, 209, 1) 58%,
+    rgba(206, 211, 216, 1) 63%,
+    rgba(228, 234, 237, 1) 78%,
+    rgba(235, 242, 244, 1) 100%,
+    rgba(17, 198, 236, 1) 100%,
+    rgba(0, 212, 255, 1) 100%
+  );
+  border-radius: 8px;
+}
+.cards div:hover {
+  box-shadow: 0 0 10px 0 rgb(49, 196, 5);
+}
+.cards div img {
+  width: 300px;
+  height: 200px;
+}
+/* .cards div p {
+  color: green;
+  font-family: sans-serif;
+  font-size: 18px;
+  font-variant: small-caps;
+} */
+/* .cards div h1 {
+  color: #333333;
+  font-size: 17px;
+  font-family: sans-serif;
+  width: 100%;
+  height: auto;
+} */
+
+#tab {
+  width: 98%;
+  margin: 60px auto;
+}
+#tab th {
+  background-color: #353b48;
+  color: rgb(3, 238, 35);
+  font-size: 18px;
+  height: 40px;
+  text-align: center;
+}
+
+#tab td {
+  width: 180px;
+  text-align: center;
+  border: 1px solid rgb(231, 4, 117);
+  padding: 2px;
   font-size: 18px;
   font-weight: bold;
+  color: darkslategrey;
 }
