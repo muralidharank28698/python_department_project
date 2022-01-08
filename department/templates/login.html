@@ -7,6 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>LOGIN FORM</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
     <style>
       * {
         margin: 0px;
@@ -50,7 +54,6 @@
         font-family: serif;
       }
       .logo {
-        /* float: left; */
         width: 160px;
         margin: 8px auto;
         height: 120px;
@@ -65,81 +68,93 @@
       body {
         background-color: ghostwhite;
         font-family: sans-serif;
+        height: max-content;
       }
-      #container {
-        max-width: 500px;
-        height: 320px;
-        position: absolute;
-        top: 70%;
-        text-align: center;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 400px;
-        /* border: 1px solid rgb(246, 237, 237); */
-        border: none;
-        border-radius: 6px;
-        box-shadow: 1px 2px 15px 2px rgb(155, 141, 151);
-      }
-      #container table {
-        width: 90%;
-        height: 90%;
-        margin: 6px auto;
-      }
-      #container table td {
-        padding: 5px;
-      }
-      #container table tr td input {
+      /* #footer {
+        height: 60px;
         width: 100%;
-        height: 35px;
-        border-radius: 3px;
-        font-size: 20px;
-        border: 1px solid rebeccapurple;
-        transition: 0.25px;
-        cursor: pointer;
-        color: rgb(78, 10, 204);
-      }
-      #container table tr h3 {
-        font-size: 1rem;
-        margin-top: 8px;
-      }
-      #container table tr td button {
-        width: 100%;
-        height: 35px;
-        border-radius: 3px;
-        font-size: 2vw;
-        color: #f0932b;
-        background-color: #535c68;
-        text-transform: uppercase;
-        font-weight: bold;
-        font-family: Georgia, "Times New Roman", Times, serif;
-        cursor: pointer;
-        margin-top: 6px;
-      }
-      #container table tr td button:hover {
+        background-color: #050435;
         color: white;
-        background-color: #30336b;
+        line-height: 60px;
+      } */
+
+      /* another login style */
+
+      .container {
+        max-width: 280px;
+        /* position: absolute; */
+        /* top: 50%; */
+        /* left: 50%; */
+        /* transform: translate(-50%, -50%); */
+        margin: 30px auto;
+        height: max-content;
       }
-      #container table tr td h2 {
-        font-size: 150%;
-        color: #1b1464;
+      .container h1 {
+        float: left;
+        border-bottom: 5px solid rgb(190, 181, 187);
+        font-size: 24px;
+        margin-bottom: 50px;
+        padding: 12px 0;
+        color: rgb(251, 247, 8);
+        text-shadow: 2px 2px 1px rgb(165, 7, 152);
       }
-      #container table tr td h4 {
-        color: #575fcf;
-        opacity: 0.9;
+      .textbox {
+        width: 100%;
+        overflow: hidden;
+        font-size: 20px;
+        padding: 8px 0;
+        margin: 12px 0;
+        border-bottom: 1px solid rgb(246, 116, 10);
+      }
+
+      .textbox input {
+        border: none;
+        outline: none;
+        background: none;
+        color: rgb(28, 10, 185);
+        font-size: 14px;
+        width: 80%;
+        float: left;
+        margin: 0 10px;
+      }
+      .btn {
+        width: 100%;
+        height: 30px;
+        font-size: 18px;
+        font-family: "Courier New", Courier, monospace;
+        font-weight: 600;
+        color: rgb(244, 244, 248);
+        margin: 10px 0;
+        background: rgb(92, 89, 89);
+        border: 2px solid rgb(3, 49, 102);
         cursor: pointer;
       }
-      #container table tr td h3 {
-        color: #1e272e;
-        opacity: 0.8;
+      .btn:hover {
+        background-color: rgb(3, 3, 29);
+        color: rgb(255, 143, 15);
       }
-      @media screen and (max-width: 500px) {
-        #container {
-          max-width: 300px;
-          height: auto;
-        }
-        #container table {
-          width: 100%;
-        }
+      a {
+        color: rgb(150, 22, 230);
+        font-family: Georgia, "Times New Roman", Times, serif;
+        font-size: 18px;
+        text-decoration: none;
+      }
+      a:hover {
+        color: green;
+        text-decoration: underline;
+      }
+      /* img {
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        position: fixed;
+        opacity: 1;
+      } */
+      .textbox i {
+        float: left;
+        color: rgb(147, 236, 64);
+        text-align: center;
       }
     </style>
   </head>
@@ -150,57 +165,42 @@
       </div>
       <h1>Puducherry Technological University</h1>
     </header>
-    <div id="container">
-      <form action="login" method="">
-        {% csrf_token %}
-        <table>
-          <tr>
-            <td><h2>Login Form</h2></td>
-          </tr>
-          <tr align="left">
-            <td><h3>Enter the mailid</h3></td>
-          </tr>
-          <tr>
-            <td>
-              <input
-                type="mailid"
-                name="mailid"
-                value=""
-                id="mailid"
-                placeholder=""
-              />
-            </td>
-          </tr>
-          <tr align="left">
-            <td><h3>Enter the Password</h3></td>
-          </tr>
-          <tr></tr>
-          <tr>
-            <td>
-              <input
-                type="password"
-                name="password"
-                value=""
-                id="pwd"
-                placeholder=""
-              />
-            </td>
-          </tr>
-          <tr align="left">
-            <td><h4>Forget Password?</h4></td>
-          </tr>
-          <tr>
-            <td align="center">
-              <button id="btn" onclick="btnclick()" name="login">login</button>
-            </td>
-          </tr>
-        </table>
-      </form>
-    </div>
-    {% for message in messages %}
+
+    <!-- {% for message in messages %}
     <h2>{{message}}</h2>
-    {% endfor %}
-    <script>
+    {% endfor %} -->
+
+    <!-- another login -->
+
+    <div>
+      <img src="./images/bg.jpg" alt="" />
+      <div class="container">
+        <h1>User Login</h1>
+        <div class="textbox">
+          <i class="fa fa-user fa-user"></i>
+          <input
+            type="mailid"
+            name="mailid"
+            id="mailid"
+            placeholder="Type Position[Eg:Faculty(or)Student]"
+          />
+        </div>
+        <div class="textbox">
+          <i class="fa fa-lock fa-lock"></i>
+          <input
+            type="password"
+            name="password"
+            id="pwd"
+            placeholder="Enter the Password.."
+          />
+        </div>
+        <br />
+        <a href="">Forget Password?</a>
+        <input type="button" name="" value="Login" id="" class="btn" />
+      </div>
+    </div>
+
+    <!-- <script>
       function btnclick() {
         // alert("working");
         let mail = document.getElementById("mailid").value;
@@ -213,6 +213,6 @@
           alert("enter the password...");
         }
       }
-    </script>
+    </script> -->
   </body>
 </html>

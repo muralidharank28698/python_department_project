@@ -7,8 +7,87 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Department project</title>
     <link rel="stylesheet" href="{% static 'styles/alldepstyle.css' %}" />
-    <link rel="stylesheet" href="{% static 'styles/cse.css' %}" />
+    <!-- <link rel="stylesheet" href="{% static 'styles/cse.css' %}" /> -->
     <link rel="stylesheet" href="{% static 'styles/alldepnav.css' %}" />
+    <style>
+      /* body {
+        background-color: #ff4500;
+        background-image: url("{% static 'images/lab1.jpg' %}");
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 100%;
+        opacity: 0.8;
+      } */
+
+      .para {
+        width: 60%;
+        /* background-color: royalblue; */
+        height: max-content;
+        margin: 20px auto;
+        /* background-image: url("{% static 'images/lab1.jpg' %}"); */
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+      p {
+        text-align: center;
+        font-size: 22px;
+        font-family: serif;
+        color: rgb(29, 30, 31);
+        /* text-align: justify; */
+        line-height: 30px;
+      }
+      .btns {
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+        flex-direction: column;
+      }
+      /* .btns a {
+        width: 180px;
+        margin: 20px auto;
+      } */
+      .btns button {
+        width: max-content;
+        font-size: 18px;
+        border-radius: 6px;
+        font-family: serif;
+        border: none;
+        color: rgb(243, 240, 237);
+        padding: 6px;
+        background-color: rgb(118, 59, 177);
+      }
+      .btns button:hover {
+        background-color: rgb(16, 156, 16);
+      }
+
+      #footer {
+        height: 60px;
+        width: 100%;
+        background-color: #050435;
+        color: white;
+        line-height: 60px;
+      }
+      /* .container { */
+      /* background-color: rgb(226, 214, 210); */
+      /* width: 100%; */
+      /* margin: auto; */
+      /* background-image: url("{% static 'images/lab1.jpg' %}"); */
+      /* background-size: cover; */
+      /* background-repeat: no-repeat; */
+      /* opacity: 0.7; */
+      /* } */
+      .toppara {
+        /* background-color: orangered; */
+        color: rgb(86, 7, 97);
+        display: inline;
+        border-bottom: 2px solid rgb(24, 245, 24);
+        font-size: 26px;
+        margin: auto;
+        text-shadow: 1px 2px 1px blue;
+        word-spacing: 4px;
+        text-transform: uppercase;
+      }
+    </style>
   </head>
   <body>
     <header>
@@ -28,6 +107,45 @@
       <a href="{% url 'csesyllabus' %}">SYLLABUS</a>
       <a href="{% url 'csefacility' %}">FACILITY</a>
     </div>
-    <h1>syllabus</h1>
+    <div class="container">
+      <p class="toppara">...\All Courses Syllabus/...</p>
+      <hr style="margin-top: 40px" />
+      <div class="para">
+        <div class="btns">
+          <p>
+            If You View MCA syllabus mean you can view through the below
+            Button...
+          </p>
+          <a href="{% static 'Syallabus/Mca.pdf' %}" target="_blank"
+            ><button>Mca Syllabus</button></a
+          >
+        </div>
+        <hr />
+        <div class="btns">
+          <p>
+            If You View B.Tech syllabus mean you can view through the below
+            Button...
+          </p>
+          <a href="{% static 'Syallabus/B_Tech.pdf' %}" target="_blank"
+            ><button>B.Tech Syllabus</button></a
+          >
+        </div>
+        <hr />
+        <div class="btns">
+          <p>
+            If You View M.Tech syllabus mean you can view through the below
+            Button...
+          </p>
+          <a href="{% static 'Syallabus/M_Tech.pdf' %}" target="_blank"
+            ><button>M.Tech Syllabus</button></a
+          >
+        </div>
+      </div>
+    </div>
+    <div id="footer">
+      <center>
+        Copyright &copy; 2022 | Design By dharanarjun28698@pec.edu
+      </center>
+    </div>
   </body>
 </html>

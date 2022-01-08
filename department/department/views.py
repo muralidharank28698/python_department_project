@@ -1,13 +1,15 @@
-# from django.shortcuts import render
+from django.shortcuts import render
 
 # Create your views here.
 
 from django.shortcuts import render
-# from django.http import HttpResponse
+from django.http import HttpResponse
 from department.models import Faculty
 from django.contrib import messages
 from .models import Faculty
 from .models import Register
+# import RequestContext
+# from django.contrib.auth    
 # from django.contrib.auth.models import saverecord, auth
 # from .forms import Formregister
 
@@ -22,17 +24,7 @@ def index(request):
 def department(request):
     # return HttpResponse("<h1>Hello Muralidharan...</h1>")
     # return render(request,'login.html')
-    if request.method == 'POST':
-        if request.POST.get('uname') and request.POST.get('email') and request.POST.get('password'):
-            saverecord = Register()
-            saverecord.uname = request.POST.get('uname')
-            saverecord.email = request.POST.get('email')
-            saverecord.password = request.POST.get('password')
-            saverecord.save()
-            messages.success(request,'record saved....')
-            return render(request,'./department.html')
-    else:
-            return render(request,'./department.html')
+    return render(request,'./department.html')
         
 
 def about(request):
@@ -77,8 +69,23 @@ def csefacility(request):
     
 def departmentPortal(request):
     return render(request,'./departmentPortal.html')
+
+def staffstud(request):
+    if request.method == 'POST':
+        if request.POST.get('uname') and request.POST.get('position') and request.POST.get('email') and request.POST.get('password'):
+            saverecord = Register()
+            saverecord.uname = request.POST.get('uname')
+            saverecord.position = request.POST.get('position')
+            saverecord.email = request.POST.get('email')
+            saverecord.password = request.POST.get('password')
+            saverecord.save()
+            messages.success(request,'record saved....')
+            return render(request,'./staffstud.html')
+    else:
+            return render(request,'./staffstud.html')
     
 def login(request):
+    return render(request,'./login.html')
     # if request.method == 'post':
     #     mailid = request.POST['mailid']
     #     password = request.POST['password']
@@ -86,7 +93,6 @@ def login(request):
         # saverecord = user.authenticate(mailid=mailid,password=password)
 
     # else:
-        return render(request,'./login.html')
 # def insertrecord(request):
 #     form = Formregister(request.POST or None)
 #     if form.is_valid():
