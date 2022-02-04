@@ -152,24 +152,24 @@
     <div class="topic">
       <h1>Register form</h1>
     </div>
-    <form method="POST">
+    <form action="" method="POST">
       {% csrf_token %}
       <div class="container">
         <table>
           <tr>
             <th>
-              <label for="uname"><b>Username</b></label>
+              <label for="uname"><b>Enter only Staff or Student</b></label>
             </th>
             <td>
               <input
                 type="text"
-                placeholder="Enter username"
-                name="uname"
+                placeholder="Enter Staff or Student"
+                name="username"
                 required
               />
             </td>
           </tr>
-          <tr>
+          <!-- <tr>
             <th>
               <label for="uname"><b>select the position</b></label>
             </th>
@@ -180,7 +180,7 @@
                 <option value="Student">Student</option>
               </select>
             </td>
-          </tr>
+          </tr> -->
           <tr>
             <th>
               <label for="email"><b>Email</b></label>

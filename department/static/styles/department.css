@@ -79,11 +79,12 @@ table tr td a:hover {
   text-align: center;
   margin: 25px;
   cursor: pointer;
+  transition: transform 200ms ease-in;
   /* background-color: #c8ced3; */
 }
-/* .card:hover {
-  display: none;
-} */
+.card:hover {
+  transform: scale(1.05);
+}
 .image-sec {
   width: 100%;
   display: flex;

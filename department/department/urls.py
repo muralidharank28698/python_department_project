@@ -46,7 +46,9 @@ urlpatterns = [
     path('csefacility/',views.csefacility,name='csefacility'),
     path('departmentPortal/',views.departmentPortal,name='departmentPortal'),
     path('login/',views.login,name='login'),
-    path('staffstud/',views.staffstud,name='staffstud')
+    path('staffstud/',views.staffstud,name='staffstud'),
+    path('studentportalpage/',views.studentportalpage,name='studentportalpage'),
+    path('staffportalpage/',views.staffportalpage,name='staffportalpage')
 
     # path('about/',views.about,name='about')
 ]

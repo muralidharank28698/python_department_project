@@ -1,0 +1,136 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="{% static 'styles/alldepstyle.css' %}" /> -->
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+      }
+      .logo {
+        width: 160px;
+        margin: 8px auto;
+        height: 120px;
+        border-radius: 20px;
+      }
+      .logo img {
+        width: 100%;
+        height: 100%;
+        border-radius: 20px;
+      }
+
+      header {
+        font-family: Raleway;
+        margin: 0 auto;
+        padding: 0.3em 1em;
+        text-align: center;
+        background: rgb(12, 12, 12);
+      }
+      header h1 {
+        color: rgb(251, 249, 249);
+        font-size: 45px;
+        font-weight: lighter;
+        margin-bottom: 5px;
+        text-shadow: 5px 6px 4px rgb(31, 124, 8);
+        font-family: serif;
+        margin-bottom: 30px;
+      }
+      .heading {
+        width: 100%;
+        background: #2a2b74;
+        background: -webkit-linear-gradient(0deg, #2a2b74 0%, #343438 100%);
+        background: linear-gradient(0deg, #2a2b74 0%, #343438 100%);
+      }
+      .heading > h1 {
+        color: rgb(245, 230, 29);
+        text-align: right;
+        padding-right: 60px;
+        padding-top: 100px;
+        font-size: 2vw;
+        text-shadow: 1px 2px 3px rgb(236, 89, 4);
+        font-family: serif;
+        text-transform: uppercase;
+      }
+      .container {
+        /* background: url("{% static 'images/StudPortalImg.jpg' %}"); */
+
+        width: 100%;
+        /* background-repeat: no-repeat; */
+        /* background-size: cover; */
+        /* background-color: indigo; */
+      }
+      .heading span {
+        color: rgb(28, 12, 243);
+        font-size: 6vw;
+        font-style: italic;
+      }
+
+      .para {
+        width: 50%;
+        height: max-content;
+        margin: 60px auto;
+      }
+      p {
+        text-align: center;
+        font-size: 22px;
+        font-family: serif;
+        color: rgb(29, 30, 31);
+        line-height: 30px;
+      }
+
+      .btns {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+        flex-direction: column;
+      }
+
+      .btns button {
+        margin: 20px auto;
+        width: 160px;
+        font-size: 20px;
+        border-radius: 3px;
+        font-family: serif;
+        border: none;
+        color: rgb(240, 84, 12);
+        padding: 4px;
+        background-color: rgb(2, 41, 53);
+      }
+      .btns button:hover {
+        background-color: rgb(23, 3, 59);
+        color: grey;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <header>
+        <div class="logo">
+          <img src="{% static 'images/clglogo.jpg' %}" alt="" />
+        </div>
+        <h1>Puducherry Technological University</h1>
+      </header>
+    </div>
+    <div class="heading">
+      <h1><span>S</span>taff <span>D</span>ashboard <span>P</span>age</h1>
+    </div>
+    <div class="container">
+      <div class="para">
+        <div class="btns">
+          <p>View Personal Information</p>
+          <button>view</button>
+        </div>
+        <hr />
+        <div class="btns">
+          <p>upload Internal Marks</p>
+          <button>Upload</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

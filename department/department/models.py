@@ -11,13 +11,13 @@ import os
 #     filename = "%s%s" % (timeNow, old_filename)
 #     return os.path.join('',filename)
 
-class Register(models.Model):
-    uname = models.CharField(max_length=100)
-    position = models.CharField(max_length=100)
-    email = models.CharField(max_length=100)
-    password = models.CharField(max_length=100)
-    class Meta:
-        db_table="register"
+# class Register(models.Model):
+#     uname = models.CharField(max_length=100)
+#     position = models.CharField(max_length=100)
+#     email = models.CharField(max_length=100)
+#     password = models.CharField(max_length=100)
+#     class Meta:
+#         db_table="register"
 
 
 

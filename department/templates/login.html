@@ -171,33 +171,52 @@
     {% endfor %} -->
 
     <!-- another login -->
-
     <div>
-      <img src="./images/bg.jpg" alt="" />
-      <div class="container">
-        <h1>User Login</h1>
-        <div class="textbox">
-          <i class="fa fa-user fa-user"></i>
-          <input
-            type="mailid"
-            name="mailid"
-            id="mailid"
-            placeholder="Type Position[Eg:Faculty(or)Student]"
-          />
+      <form action="" method="POST">
+        {% csrf_token %}
+        <div class="container">
+          <h1>Login</h1>
+          <!-- <div class="textbox">
+            <i class="fa fa-user fa-user"></i>
+            <input
+              type="text"
+              name="username"
+              id="uname"
+              placeholder="Enter the username"
+            />
+          </div> -->
+
+          <div class="textbox">
+            <i class="fa fa-user fa-user"></i>
+            <input
+              type="text"
+              name="username"
+              id="uname"
+              placeholder="Enter Only 'Staff or Student'"
+            />
+            <!-- <select name="position" id="">
+              <option value="Student">Student</option>
+              <option value="Staff">Staff</option>
+            </select> -->
+          </div>
+
+          <div class="textbox">
+            <i class="fa fa-lock fa-lock"></i>
+            <input
+              type="password"
+              name="password"
+              id="pwd"
+              placeholder="Enter the Password.."
+            />
+          </div>
+          <br />
+          <a href="">Forget Password?</a>
+          <input type="submit" name="" value="Login" id="" class="btn" />
         </div>
-        <div class="textbox">
-          <i class="fa fa-lock fa-lock"></i>
-          <input
-            type="password"
-            name="password"
-            id="pwd"
-            placeholder="Enter the Password.."
-          />
-        </div>
-        <br />
-        <a href="">Forget Password?</a>
-        <input type="button" name="" value="Login" id="" class="btn" />
-      </div>
+        {% if messages %} {% for message in messages %}
+        <h2 style="color: green">{{messge}}</h2>
+        {% endfor %} {% endif %}
+      </form>
     </div>
 
     <!-- <script>
