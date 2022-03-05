@@ -208,3 +208,119 @@ hr {
   width: 90%;
   margin: 30px auto;
 }
+
+/* campus life css */
+
+.parent-container {
+  width: 90%;
+  margin: 30px auto;
+  /* border: 1px solid green; */
+}
+.topic {
+  width: max-content;
+}
+.topic h1 {
+  border-left: 5px solid red;
+  padding: 1px 12px;
+  padding-left: 16px;
+  font-size: 28px;
+  color: rgb(42, 43, 44);
+  border-bottom: 5px solid red;
+  /* margin: 22px; */
+  text-align: left;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.campus-container {
+  /* position: relative; */
+  display: grid;
+  width: 100%;
+  /* flex-direction: column; */
+  /* height: 400px; */
+  /* transform: translateX(-50%); */
+  /* left: 50%; */
+  /* border: 5px solid green; */
+  /* margin: 20px auto; */
+  /* display: grid; */
+  /* grid-template-columns: 300px 300px 300px 300px; */
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-auto-rows: 200px;
+  grid-gap: 16px;
+  /* margin: 20px auto; */
+  /* padding: 10px; */
+}
+
+.items {
+  width: 100%;
+  height: 100%;
+  /* transition: transform 200ms ease-out; */
+}
+.items img {
+  width: 100%;
+  height: 100%;
+}
+.items img:hover {
+  transform: scale(1.02);
+}
+.col11 {
+  grid-row: 1/3;
+  grid-column: 1/3;
+}
+
+@media only screen and (max-width: 777px) {
+  .parent-container {
+    width: 70%;
+    margin: 30px auto;
+  }
+  .campus-container {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    grid-gap: 6px;
+  }
+
+  .items {
+    width: 100%;
+    height: 100%;
+  }
+  .items img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media only screen and (max-width: 389px) {
+  .parent-container {
+    width: 70%;
+    margin: 30px auto;
+  }
+  .campus-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .topic h1 {
+    border-left: 5px solid red;
+    /* padding: 1px 12px; */
+    /* padding-left: 20px; */
+    font-size: 2px;
+    border-bottom: 5px solid red;
+    text-transform: uppercase;
+  }
+}
+@media only screen and (max-width: 642px) {
+  .parent-container {
+    width: 70%;
+    margin: 30px auto;
+  }
+  .campus-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .topic h1 {
+    border-left: 5px solid red;
+    font-size: 22px;
+    border-bottom: 5px solid red;
+    text-transform: uppercase;
+  }
+}
